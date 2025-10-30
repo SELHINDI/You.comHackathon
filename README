@@ -1,0 +1,163 @@
+# AutoBrand Studio
+
+**Fully Agentic Content Pipeline** powered by You.com AI
+
+A hackathon project that automates the entire marketing content creation process using AI agents. From trend analysis to A/B testing, all in one click.
+
+---
+
+## Features
+
+- **Trend Analysis** - AI researches viral marketing trends
+- **Content Ideation** - Generates 3 viral video ideas
+- **Script Writing** - Creates 30-second TikTok/Reels scripts
+- **Thumbnail Design** - Designs eye-catching thumbnails
+- **Video Planning** - Complete editing instructions
+- **A/B Testing** - Testing strategy with metrics
+
+---
+
+## Quick Start
+
+### Prerequisites
+- Python 3.7+
+- You.com API Key ([Get yours here](https://api.you.com))
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/SELHINDI/You.comHackathon.git
+cd You.comHackathon
+```
+
+2. **Set your API key**
+```bash
+export YOU_API_KEY="your-api-key-here"
+```
+
+3. **Run the server**
+```bash
+python streaming_server.py
+```
+
+4. **Open in browser**
+```
+http://localhost:8080
+```
+
+---
+
+## How to Use
+
+1. **Enter Brand Name** - e.g., "Tesla", "Nike", "Starbucks"
+2. **Describe Your Brand** - What you do, audience, values
+3. **Click "Run Pipeline"** - Watch 6 AI agents work together
+4. **Get Results** - Complete marketing content ready to use
+
+---
+
+## Files
+
+- `streaming_server.py` - Main server (all-in-one file)
+- `test_api.py` - Test your You.com API connection
+- `README.md` - This file
+
+---
+
+## How It Works
+
+The system uses **6 specialized AI agents** that work sequentially:
+
+```
+Brand Info → Agent 1 (Trends) → Agent 2 (Ideas) → Agent 3 (Script) 
+→ Agent 4 (Thumbnail) → Agent 5 (Video) → Agent 6 (A/B Test) → Results
+```
+
+Each agent uses You.com's Advanced Agent API to:
+- Research current trends
+- Generate creative content
+- Plan video production
+- Design testing strategies
+
+---
+
+## Troubleshooting
+
+### "Failed to fetch" error
+- Make sure the server is running (`python streaming_server.py`)
+- Check that you're using `http://localhost:8080`
+
+### Empty content ("Generated content")
+- Verify your API key: `echo $YOU_API_KEY`
+- Test the API: `python test_api.py`
+- Check API quota at [You.com dashboard](https://api.you.com)
+
+### Port already in use
+- Change PORT in `streaming_server.py` (line 211)
+- Use a different port like 8081 or 8082
+
+---
+
+## Alternative Setup (No Dependencies)
+
+The project uses only Python built-in libraries except for `requests`:
+
+```bash
+pip install requests
+python streaming_server.py
+```
+
+---
+
+## Output Example
+
+After running the pipeline, you'll get:
+
+**Trends:**
+- "Short-form vertical video dominates 2025 social media..."
+- "Authentic behind-the-scenes content builds trust..."
+- "User-generated content drives engagement..."
+
+**Script:**
+```
+HOOK (0-5s): "Wait, Tesla just did WHAT?!"
+BODY (5-20s): "Here's how Tesla revolutionized..."
+CTA (20-30s): "Link in bio to learn more!"
+```
+
+Plus thumbnail design, video editing plan, and A/B testing strategy!
+
+---
+
+## Hackathon Demo Tips
+
+1. **Pre-test your API key** before presenting
+2. **Have example brands ready** (Tesla, Nike work great)
+3. **Show the terminal** to display AI thinking in real-time
+4. **Emphasize the agent collaboration** - each builds on previous work
+
+---
+
+## License
+
+MIT License - Free to use for hackathons and learning!
+
+---
+
+## Contributing
+
+Built for You.com Hackathon. Feel free to fork and improve!
+
+---
+
+## Support
+
+- **API Issues:** Check [You.com API Docs](https://documentation.you.com)
+- **Server Issues:** Ensure Python 3.7+ and requests library installed
+
+---
+
+**Made for You.com Hackathon**
+
+*Turning brand descriptions into viral content with AI agents*
